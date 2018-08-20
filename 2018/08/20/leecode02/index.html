@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="题目描述在一个二维数组中（每个一维数组的长度相同），每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。 思路先把初始位置定位在二维数组的最右上角，当target比该位置值小时，将列指针减1，当比该位置值大时，则行指针加1，若找到则返回true，若没找到直至边界条件跳出返回false。 代码public">
+<meta name="description" content="题目：一个机器人位于一个 m x n 网格的左上角 （起始点在下图中标记为“Start” ）。 机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为“Finish”）。 问总共有多少条不同的路径？ 示例： 输入: m = 3, n = 2输出: 3解释:从左上角开始，总共有 3 条路径可以到达右下角。  向右 -向右 -向下 向右 -向下 -向右 向下 -向右 -向右">
 <meta property="og:type" content="article">
-<meta property="og:title" content="剑指offer-二维数组中的查找">
-<meta property="og:url" content="http://yoursite.com/2018/08/17/剑指offer01/index.html">
+<meta property="og:title" content="LeetCode-不同路径">
+<meta property="og:url" content="http://yoursite.com/2018/08/20/leecode02/index.html">
 <meta property="og:site_name" content="Jibin の blog">
-<meta property="og:description" content="题目描述在一个二维数组中（每个一维数组的长度相同），每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。 思路先把初始位置定位在二维数组的最右上角，当target比该位置值小时，将列指针减1，当比该位置值大时，则行指针加1，若找到则返回true，若没找到直至边界条件跳出返回false。 代码public">
+<meta property="og:description" content="题目：一个机器人位于一个 m x n 网格的左上角 （起始点在下图中标记为“Start” ）。 机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为“Finish”）。 问总共有多少条不同的路径？ 示例： 输入: m = 3, n = 2输出: 3解释:从左上角开始，总共有 3 条路径可以到达右下角。  向右 -向右 -向下 向右 -向下 -向右 向下 -向右 -向右">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-17T08:38:45.943Z">
+<meta property="og:updated_time" content="2018-08-16T12:55:13.329Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="剑指offer-二维数组中的查找">
-<meta name="twitter:description" content="题目描述在一个二维数组中（每个一维数组的长度相同），每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。 思路先把初始位置定位在二维数组的最右上角，当target比该位置值小时，将列指针减1，当比该位置值大时，则行指针加1，若找到则返回true，若没找到直至边界条件跳出返回false。 代码public">
+<meta name="twitter:title" content="LeetCode-不同路径">
+<meta name="twitter:description" content="题目：一个机器人位于一个 m x n 网格的左上角 （起始点在下图中标记为“Start” ）。 机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为“Finish”）。 问总共有多少条不同的路径？ 示例： 输入: m = 3, n = 2输出: 3解释:从左上角开始，总共有 3 条路径可以到达右下角。  向右 -向右 -向下 向右 -向下 -向右 向下 -向右 -向右">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/08/17/剑指offer01/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/08/20/leecode02/"/>
 
 
 
 
 
-  <title>剑指offer-二维数组中的查找 | Jibin の blog</title>
+  <title>LeetCode-不同路径 | Jibin の blog</title>
   
 
 
@@ -242,7 +242,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/17/剑指offer01/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/20/leecode02/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jibin">
@@ -259,7 +259,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">剑指offer-二维数组中的查找</h1>
+          <h1 class="post-title" itemprop="name headline">LeetCode-不同路径</h1>
         
 
         <div class="post-meta">
@@ -271,8 +271,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-17T16:41:59+08:00">
-                2018-08-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-20T21:38:40+08:00">
+                2018-08-20
               </time>
             
 
@@ -331,20 +331,33 @@
       
 
       
-        <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>在一个二维数组中（每个一维数组的长度相同），每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。</p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>先把初始位置定位在二维数组的最右上角，当target比该位置值小时，将列指针减1，当比该位置值大时，则行指针加1，若找到则返回true，若没找到直至边界条件跳出返回false。</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><pre><code>public static boolean Find(int target, int[][] array) {
-    int row = 0;
-    int col = array[0].length-1;
-    while (row &lt; array.length &amp;&amp; col &gt;= 0) {
-        if (target == array[row][col]) return true;
-        else if (target &gt; array[row][col]) {
-            row++;
-        } else if (target &lt; array[row][col]) {
-            col--;
+        <h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>一个机器人位于一个 m x n 网格的左上角 （起始点在下图中标记为“Start” ）。</p>
+<p>机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为“Finish”）。</p>
+<p>问总共有多少条不同的路径？</p>
+<h3 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h3><blockquote>
+<p>输入: m = 3, n = 2<br>输出: 3<br>解释:<br>从左上角开始，总共有 3 条路径可以到达右下角。</p>
+<ol>
+<li>向右 -向右 -向下</li>
+<li>向右 -向下 -向右</li>
+<li>向下 -向右 -向右 </li>
+</ol>
+</blockquote>
+<h3 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h3><p>本题是一道经典的动态规划题，也可以用递归来解。递归的终止条件是当某一行或者某一列只有一格，此时跳出。用递归会导致重复计算过多，时间复杂度很大。<br>最好用动态规划的方法。由于只能往右和往下移动一格，到达[i][j]的路径为[i-1][j]+[i][j-1]，那么得到状态转移方程为dp[i][j] = dp[i - 1][j] + dp[i][j - 1]。</p>
+<pre><code>public int uniquePaths(int m, int n) {
+    if (m == 0 || n == 0) return 0;
+    int[][] dp = new int[m][n];
+    for (int i = 0; i &lt; m; i++){
+        dp[i][0]=1;
+    }
+    for (int i = 0; i &lt; n; i++){
+        dp[0][i]=1;
+    }
+    for (int i = 1; i &lt;m ; i++) {
+        for (int j = 1; j &lt;n ; j++) {
+            dp[i][j] = dp[i - 1][j] + dp[i][j - 1];
         }
     }
-    return false;
+    return dp[m-1][n-1];
 }
 </code></pre>
       
@@ -370,15 +383,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/16/leecode02/" rel="next" title="LeetCode-不同路径">
-                <i class="fa fa-chevron-left"></i> LeetCode-不同路径
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/20/Leetcode01/" rel="prev" title="Leetcode-旋转数组">
+                Leetcode-旋转数组 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -521,7 +534,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#思路"><span class="nav-number">2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目："><span class="nav-number">1.</span> <span class="nav-text">题目：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#示例："><span class="nav-number">2.</span> <span class="nav-text">示例：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#思路："><span class="nav-number">3.</span> <span class="nav-text">思路：</span></a></li></ol></div>
             
 
           </div>

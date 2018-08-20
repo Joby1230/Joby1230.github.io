@@ -86,13 +86,13 @@
 <meta property="og:site_name" content="Jibin の blog">
 <meta property="og:description" content="二维数组的查找题目描述在一个二维数组中（每个一维数组的长度相同），每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。 思路先把初始位置定位在二维数组的最右上角，当target比该位置值小时，将列指针减1，当比该位置值大时，则行指针加1，若找到则返回true，若没找到直至边界条件跳出返回false。 提">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2018/08/20/剑指offer总/img/img01.png">
-<meta property="og:image" content="http://yoursite.com/2018/08/20/剑指offer总/img/img02.jpg">
-<meta property="og:updated_time" content="2018-08-20T13:17:07.489Z">
+<meta property="og:image" content="http://yoursite.com/2018/08/20/剑指offer总/images/img01.png">
+<meta property="og:image" content="http://yoursite.com/2018/08/20/剑指offer总/images/img02.jpg">
+<meta property="og:updated_time" content="2018-08-20T13:56:07.146Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="剑指offer汇总">
 <meta name="twitter:description" content="二维数组的查找题目描述在一个二维数组中（每个一维数组的长度相同），每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。 思路先把初始位置定位在二维数组的最右上角，当target比该位置值小时，将列指针减1，当比该位置值大时，则行指针加1，若找到则返回true，若没找到直至边界条件跳出返回false。 提">
-<meta name="twitter:image" content="http://yoursite.com/2018/08/20/剑指offer总/img/img01.png">
+<meta name="twitter:image" content="http://yoursite.com/2018/08/20/剑指offer总/images/img01.png">
 
 
 
@@ -274,7 +274,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-20T21:17:07+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-20T21:56:07+08:00">
                 2018-08-20
               </time>
             
@@ -352,9 +352,9 @@
 }
 </code></pre><h2 id="替换空格"><a href="#替换空格" class="headerlink" title="替换空格"></a>替换空格</h2><h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>请实现一个函数，将一个字符串中的每个空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。</p>
 <h3 id="思路1"><a href="#思路1" class="headerlink" title="思路1"></a>思路1</h3><p>O(n^2)的做法。从头到尾扫描字符串，每一次碰到空格字符的时候做替换。由于是把1个字符替换成3个字符，我们必须要把空格后面所有的字符都后移两个字节，否则就有两个字符被覆盖了。下图展示了从前往后把字符串中的空格替换成’%20’的过程：</p>
-<p><img src="img/img01.png" alt="icon"></p>
+<p><img src="images/img01.png" alt="icon"></p>
 <h3 id="思路2"><a href="#思路2" class="headerlink" title="思路2"></a>思路2</h3><p>O(n)的做法。先遍历一次字符串，这样就能统计出字符串中空格的总数，并可以由此计算出替换之后的字符串的总长度。再从字符串的后面开始复制和替换。准备两个指针，P1和P2。P1指向原始字符串的末尾，而P2指向替换之后的字符串的末尾。接下来向前移动指针P1，逐个把它指向的字符复制到P2指向的位置，直到碰到第一个空格为止。接着向前复制，直到碰到第二、三或第n个空格。</p>
-<p><img src="img/img02.jpg" alt="icon"></p>
+<p><img src="images/img02.jpg" alt="icon"></p>
 <p>###代码<br>上述思路讲的是具体的操作过程，如果用java写直接可以调用string类的方法，不过这样时间和空间复杂度比较大。</p>
 <pre><code>public String replaceSpace(StringBuffer str){
    return str.toString().replaceAll(&quot; &quot;,&quot;%20&quot;);
@@ -415,8 +415,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/16/leecode02/" rel="next" title="LeetCode-不同路径">
-                <i class="fa fa-chevron-left"></i> LeetCode-不同路径
+              <a href="/2018/08/20/Leetcode01/" rel="next" title="Leetcode-旋转数组">
+                <i class="fa fa-chevron-left"></i> Leetcode-旋转数组
               </a>
             
           </div>
