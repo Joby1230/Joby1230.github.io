@@ -239,7 +239,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/26/剑指offer总/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/27/剑指offer总/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jibin">
@@ -258,7 +258,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/08/26/剑指offer总/" itemprop="url">剑指offer汇总</a></h1>
+                <a class="post-title-link" href="/2018/08/27/剑指offer总/" itemprop="url">剑指offer汇总</a></h1>
         
 
         <div class="post-meta">
@@ -270,8 +270,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-26T21:37:32+08:00">
-                2018-08-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-27T23:15:00+08:00">
+                2018-08-27
               </time>
             
 
@@ -540,6 +540,21 @@ public void reOrderArray2(int[] array) {
         }
     }
 }
+</code></pre><h2 id="链表中倒数第k个结点"><a href="#链表中倒数第k个结点" class="headerlink" title="链表中倒数第k个结点"></a>链表中倒数第k个结点</h2><h3 id="题目描述-9"><a href="#题目描述-9" class="headerlink" title="题目描述"></a>题目描述</h3><p>输入一个链表，输出该链表中倒数第k个结点。</p>
+<h3 id="思路-9"><a href="#思路-9" class="headerlink" title="思路"></a>思路</h3><p>设置两个指针，让第二个指针移动k-1次。然后两个指针一次向后移动。当第二个指针移动道最后一个结点时，第一个指针就在倒数第k个结点。要注意特殊情况，比如k为0，k大于结点的个数这些特殊的情况。</p>
+<h3 id="代码-9"><a href="#代码-9" class="headerlink" title="代码"></a>代码</h3><pre><code>public ListNode FindKthToTail(ListNode head,int k) {
+    if (head==null||k==0) return null;
+    ListNode p1=head,p2=head;
+    for (int i = 1; i &lt;k ; i++) {
+        p2=p2.next;
+        if (p2==null) return null;
+    }
+    while (p2.next!=null){
+        p2=p2.next;
+        p1=p1.next;
+    }
+    return p1;
+}
 </code></pre>
           
         
@@ -588,7 +603,7 @@ public void reOrderArray2(int[] array) {
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/22/os/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/27/os/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jibin">
@@ -607,7 +622,7 @@ public void reOrderArray2(int[] array) {
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/08/22/os/" itemprop="url">进程线程</a></h1>
+                <a class="post-title-link" href="/2018/08/27/os/" itemprop="url">进程管理</a></h1>
         
 
         <div class="post-meta">
@@ -619,8 +634,8 @@ public void reOrderArray2(int[] array) {
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-22T23:13:21+08:00">
-                2018-08-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-27T23:14:59+08:00">
+                2018-08-27
               </time>
             
 
@@ -681,16 +696,27 @@ public void reOrderArray2(int[] array) {
       
         
           
-            <h2 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h2><p>进程是为了实现操作系统的并发性和共享性。一个进程实体由程序段、相关数据段和PCB三部分组成。</p>
+            <h3 id="进程概念"><a href="#进程概念" class="headerlink" title="进程概念"></a>进程概念</h3><p>进程是为了实现操作系统的并发性和共享性。一个进程实体由程序段、相关数据段和PCB三部分组成。</p>
 <h3 id="进程的状态"><a href="#进程的状态" class="headerlink" title="进程的状态"></a>进程的状态</h3><p>创建状态，就绪状态，运行状态，阻塞状态（等待），结束状态。</p>
-<h3 id="进程的通信"><a href="#进程的通信" class="headerlink" title="进程的通信"></a>进程的通信</h3><h4 id="1、共享存储"><a href="#1、共享存储" class="headerlink" title="1、共享存储"></a>1、共享存储</h4><p>对共享空间进行读写操作来实现进程之间的信息交换</p>
-<h4 id="2、消息传递"><a href="#2、消息传递" class="headerlink" title="2、消息传递"></a>2、消息传递</h4><p>进程之间的数据交换以message为单位，分为直接和间接通信方式</p>
-<h4 id="3、管道通信"><a href="#3、管道通信" class="headerlink" title="3、管道通信"></a>3、管道通信</h4><p>管道通信时消息传递的一种特殊方式，以共享文件（pipe文件）来实现。属于半双工通信，两者不能同时进行操作。</p>
-<h2 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h2><h3 id="进程与线程的比较"><a href="#进程与线程的比较" class="headerlink" title="进程与线程的比较"></a>进程与线程的比较</h3><p>线程是一个基本的CPU执行单元，自己不拥有系统资源，同一进程中的各个线程共享该进程所用的资源。线程是独立调度的基本单位，进程是拥有资源的基本单位。</p>
+<h3 id="进程的通信"><a href="#进程的通信" class="headerlink" title="进程的通信"></a>进程的通信</h3><h4 id="共享存储"><a href="#共享存储" class="headerlink" title="共享存储"></a>共享存储</h4><p>对共享空间进行读写操作来实现进程之间的信息交换</p>
+<h4 id="消息传递"><a href="#消息传递" class="headerlink" title="消息传递"></a>消息传递</h4><p>进程之间的数据交换以message为单位，分为直接和间接通信方式</p>
+<h4 id="管道通信"><a href="#管道通信" class="headerlink" title="管道通信"></a>管道通信</h4><p>管道通信时消息传递的一种特殊方式，以共享文件（pipe文件）来实现。属于半双工通信，两者不能同时进行操作。</p>
+<h3 id="进程与线程的比较"><a href="#进程与线程的比较" class="headerlink" title="进程与线程的比较"></a>进程与线程的比较</h3><p>线程是一个基本的CPU执行单元，自己不拥有系统资源，同一进程中的各个线程共享该进程所用的资源。线程是独立调度的基本单位，进程是拥有资源的基本单位。</p>
 <h3 id="线程的实现方式"><a href="#线程的实现方式" class="headerlink" title="线程的实现方式"></a>线程的实现方式</h3><p>分为用户型线程和内核级线程。用户级线程，内核意识不到线程的存在。内核级线程中，线程管理的所有工作都由内核来完成。</p>
-<h3 id="多线程模型"><a href="#多线程模型" class="headerlink" title="多线程模型"></a>多线程模型</h3><h4 id="1、多对一模型"><a href="#1、多对一模型" class="headerlink" title="1、多对一模型"></a>1、多对一模型</h4><p>将多个用户级线程映射到一个内核级线程。<br>优点：用户态完成，效率高。<br>缺点：当一个线程在使用内核服务时被阻塞时，整个进程都会被阻塞。</p>
-<h4 id="2、一对一模型"><a href="#2、一对一模型" class="headerlink" title="2、一对一模型"></a>2、一对一模型</h4><p>将每个用户级线程映射到内核级线程。<br>优点：当遇到阻塞时，其他线程也能执行，并发性较好<br>缺点：每创建一个用户及线程都需创建一个内核级线程与其对应，开销较大，影响性能。</p>
-<h4 id="3、多对多模型"><a href="#3、多对多模型" class="headerlink" title="3、多对多模型"></a>3、多对多模型</h4><p>将n个用户及线程映射到m个内核级线程上。(n&lt;m)结合了多对一模型和一对一模型。</p>
+<h3 id="多线程模型"><a href="#多线程模型" class="headerlink" title="多线程模型"></a>多线程模型</h3><h4 id="多对一模型"><a href="#多对一模型" class="headerlink" title="多对一模型"></a>多对一模型</h4><p>将多个用户级线程映射到一个内核级线程。<br>优点：用户态完成，效率高。<br>缺点：当一个线程在使用内核服务时被阻塞时，整个进程都会被阻塞。</p>
+<h4 id="一对一模型"><a href="#一对一模型" class="headerlink" title="一对一模型"></a>一对一模型</h4><p>将每个用户级线程映射到内核级线程。<br>优点：当遇到阻塞时，其他线程也能执行，并发性较好<br>缺点：每创建一个用户及线程都需创建一个内核级线程与其对应，开销较大，影响性能。</p>
+<h4 id="多对多模型"><a href="#多对多模型" class="headerlink" title="多对多模型"></a>多对多模型</h4><p>将n个用户及线程映射到m个内核级线程上。(n&lt;m)结合了多对一模型和一对一模型。</p>
+<h3 id="处理机调度"><a href="#处理机调度" class="headerlink" title="处理机调度"></a>处理机调度</h3><h4 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h4><p>从就绪队列中，按照一定的算法选择一个进程将处理机分配给它运行。</p>
+<h4 id="调度层次"><a href="#调度层次" class="headerlink" title="调度层次"></a>调度层次</h4><h5 id="作业调度（高级调度）"><a href="#作业调度（高级调度）" class="headerlink" title="作业调度（高级调度）"></a>作业调度（高级调度）</h5><p>是内存和辅存之间的调度。从外存上处于后备状态的作业挑选，给它们分配内存、输入输出设备等必要的资源，并建立相应的进程，使其获得竞争处理机的权利。常见于多道批处理系统中。</p>
+<h5 id="中级调度（内存调度、中级调度）"><a href="#中级调度（内存调度、中级调度）" class="headerlink" title="中级调度（内存调度、中级调度）"></a>中级调度（内存调度、中级调度）</h5><p>将挂起状态的进程，也就是在外存中等待的进程，当它们具备运行条件且内存有空闲，将这些进程重新调入内存，修改为就绪状态，提高内存利用率和系统吞吐量。</p>
+<h5 id="进程调度（低级调度）"><a href="#进程调度（低级调度）" class="headerlink" title="进程调度（低级调度）"></a>进程调度（低级调度）</h5><p>按照某钟算法将选取就绪队列中的进程，将处理机分配给它们，其频率很高，一般几十毫秒一次。</p>
+<h4 id="进程调度方式"><a href="#进程调度方式" class="headerlink" title="进程调度方式"></a>进程调度方式</h4><p>分为非剥夺调度方式（非抢占方式）和剥夺调度方式（抢占方式）。<br>不能进行进程调度和切换的情况。1、在处理中断的过程中。2、进程在操作系统临界区。3、在其他需要完全屏蔽的原子操作过程中，如加锁、解锁之类。在这种情况下，应置系统的请求调度标志。</p>
+<h4 id="典型调度算法"><a href="#典型调度算法" class="headerlink" title="典型调度算法"></a>典型调度算法</h4><h5 id="先来先服务"><a href="#先来先服务" class="headerlink" title="先来先服务"></a>先来先服务</h5><p>属于不可剥夺算法，算法简单但效率低，有利于cpu繁忙型作业，不利于IO繁忙型作业。</p>
+<h5 id="短作业优先"><a href="#短作业优先" class="headerlink" title="短作业优先"></a>短作业优先</h5><p>对长作业不利，会产生饥饿现象。</p>
+<h5 id="优先级调度算法"><a href="#优先级调度算法" class="headerlink" title="优先级调度算法"></a>优先级调度算法</h5><p>分为非剥夺式和剥夺式。按照创建后优先级是否可变分为静态优先级和动态优先级。</p>
+<h5 id="高响应比优先"><a href="#高响应比优先" class="headerlink" title="高响应比优先"></a>高响应比优先</h5><p>响应比=（等待时间+要求服务时间）/要求服务时间<br>这个方法克服了短作业优先的饥饿状态。</p>
+<h5 id="时间片轮转调度"><a href="#时间片轮转调度" class="headerlink" title="时间片轮转调度"></a>时间片轮转调度</h5><p>适用于分时系统。</p>
+<h5 id="多级反馈队列调度算法"><a href="#多级反馈队列调度算法" class="headerlink" title="多级反馈队列调度算法"></a>多级反馈队列调度算法</h5><p>动态调整进程优先级和时间片大小。结合了前几钟算法的优点。</p>
 
           
         
